@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/jpa?serverTimeZone=UTC
+    password: 223345
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+      naming:
+        physical-strategy=org:
+          hibernate:
+            boot:
+              model:
+                naming:
+                  PhysicalNamingStrategyStandardImpl:show-sql: true
